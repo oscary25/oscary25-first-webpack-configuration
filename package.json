@@ -7,12 +7,15 @@
     "build": "webpack --mode production",
     "builddev": "webpack --mode development",
     "build-external": "webpack --config ./external/webpack.dev.js",
-    "build-multi": "webpack --config ./multiEntryPoint/webpack.dev.js"
+    "build-multi": "webpack --config ./multiEntryPoint/webpack.dev.js",
+    "build-css": "webpack --config ./cssStyleLoader/webpack.dev.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "3.5.3",
+    "style-loader": "1.2.1",
     "webpack": "4.43.0",
     "webpack-cli": "3.3.11"
   }
