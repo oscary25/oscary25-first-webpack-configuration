@@ -1,3 +1,12 @@
 import "../css/index.css";
 
-document.body.innerHTML = "aQUI LLEGO TU TIBURÓN";
+import test from "./test";
+
+if (module.hot) {
+  module.hot.accept("./test", function () {
+    console.log("Haciendo el hot reload");
+    test();
+  });
+}
+
+test();
