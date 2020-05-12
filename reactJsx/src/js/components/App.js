@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
+import data from "./data.json";
 function App(props) {
+  const [loaderList, setLoaderList] = useState([]);
+  console.log(data);
+
+  function handleClick() {
+    setLoaderList(data.loaders);
+  }
+
   return (
-    <section className="App">
-      <h1>App Testingw</h1>
+    <section>
+      <ul>
+        {loaderList.map((item, index) => (
+          <li key={index.id}>{item.name}</li>
+        ))}
+      </ul>
+      <p>Qlok wawa</p>
+      <button onClick={handleClick}>Dale aquí🌚</button>
     </section>
   );
 }
