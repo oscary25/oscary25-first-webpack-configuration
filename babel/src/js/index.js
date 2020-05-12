@@ -1,12 +1,14 @@
 import "../css/index.css";
 
-import test from "./test";
+import search from "./search";
+import render from "./render";
 
-if (module.hot) {
-  module.hot.accept("./test", function () {
-    console.log("Haciendo el hot reload");
-    test();
+const id = prompt("Pon un id haber que sale");
+
+search(id)
+  .then((data) => {
+    render(data);
+  })
+  .catch(() => {
+    console.log("Pusiste un disparate");
   });
-}
-
-test();
