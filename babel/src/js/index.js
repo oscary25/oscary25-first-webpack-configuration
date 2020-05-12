@@ -10,5 +10,5 @@ search(id)
     render(data);
   })
   .catch(() => {
-    console.log("Pusiste un disparate");
+    alert("Pusiste un disparate");
   });
