@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
-import data from "./data.json.js";
+import data from "./data.json";
+import Logo from "../../assets/images/platzi.png";
+import Video from "../../assets/video/que-es-core.mp4";
+
 function App(props) {
   const [loaderList, setLoaderList] = useState([]);
   console.log(data);
@@ -11,6 +14,13 @@ function App(props) {
 
   return (
     <section>
+      <div>
+        <video src={Video} width={400} controls />
+      </div>
+      <div>
+        {" "}
+        <img src={Logo} alt="" width={400} />
+      </div>
       <ul>
         {loaderList.map((item, index) => (
           <li key={index.id}>{item.name}</li>
