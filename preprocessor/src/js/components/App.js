@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
-import data from "./data.json.js.js.js";
+import data from "./data.json";
 import Logo from "../../assets/images/platzi.png";
 import Video from "../../assets/video/que-es-core.mp4";
+import "../../sass/style.scss";
 
 function App(props) {
   const [loaderList, setLoaderList] = useState([]);
@@ -14,6 +15,7 @@ function App(props) {
 
   return (
     <section>
+      <p className="sass">Esto sass perra</p>
       <div>
         <video src={Video} width={400} controls />
       </div>
